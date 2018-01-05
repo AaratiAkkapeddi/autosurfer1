@@ -1,0 +1,21 @@
+{
+  "name": "autosurfer#1",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "autosurf google images",
+  "homepage_url": "http://www.aarati.me",
+  "permissions": ["tabs", "history", "storage","tts", "*://*/*","http://*/"],
+  "background": {
+    "scripts": ["jquery.min.js","background.js"]
+  }, 
+  "content_scripts":[
+   {
+    "matches":["*://*/*"],
+    "css" : ["mycss.css"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/off.png",
+    "name": "Show me images"
+  }
+}
